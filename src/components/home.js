@@ -4,13 +4,13 @@ import axios from 'axios';
 import Search from './search';
 import Artistlist from './artistlist';
 
-class Home extends Component { 
+class Home extends Component {
 
     state = {
         artists:[]
     }
 
-    componentWillMount() {
+    componentDidMount() {
         axios.get("http://localhost:3004/artists")
         .then(response =>{
            this.setState({
@@ -34,7 +34,7 @@ class Home extends Component {
             </div>
         )
     }
-    
+
 }
 
 export default Home;
